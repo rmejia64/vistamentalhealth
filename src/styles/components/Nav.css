@@ -1,0 +1,85 @@
+.nav-container {
+    z-index: 2;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0px 2px 10px black;
+    width: 100vw;
+    height: 80px;
+    padding: 10px;
+    background-image: -webkit-linear-gradient(90deg, #4068B4, #1B4188);
+}
+
+.link-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    min-width: 500px;
+}
+
+.logo {
+    width: 75px;
+    height: auto;
+}
+
+.menu-button {
+    width: 25px;
+    height: auto;
+    display: none;
+}
+
+.title,
+.company-name,
+.company-subname {
+    text-align: center;
+    font-family: 'louisgeorge-reg';
+    margin: 0;
+    color: white
+}
+
+.title-link {
+    color: white;
+    text-decoration: none;
+}
+
+.company-name {
+    font-size: 24pt;
+}
+
+.company-subname {
+    font-size: 16pt;
+}
+
+.nav-link {
+    font-family: 'louisgeorge-reg';
+    font-size: 12pt;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link:hover,
+.title-link:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 950px) {
+    .link-container {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .company-name {
+        font-size: 18pt;
+    }
+    
+    .company-subname {
+        font-size: 14pt;
+    }
+}

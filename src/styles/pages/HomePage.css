@@ -1,0 +1,67 @@
+.banner-card {
+    background-color: white;
+    height: auto;
+    width: 40%;
+    max-width: 600px;
+    min-width: 300px;
+    z-index: 1;
+    position: absolute;
+    bottom: 25px;
+    right: 50px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-card-message {
+    font-size: 12pt;
+}
+
+.call-to-action {
+    background-color: white;
+    height: 300px;
+    width: 40%;
+    max-width: 600px;
+    min-width: 300px;
+    z-index: 1;
+    position: absolute;
+    top: 450px;
+    left: 50px;
+    box-shadow: var(--box-shadow);
+}
+
+.section-one {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.about-us {
+    width: 40%;
+    height: auto;
+    background-color: white;
+    padding: 25px;
+    box-shadow: var(--box-shadow);
+}
+
+.row-one {
+    width: auto;
+    margin: 0;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.subheading-one {
+    font-size: 16pt;
+}
