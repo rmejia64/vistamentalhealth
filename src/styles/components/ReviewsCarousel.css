@@ -1,0 +1,9 @@
+.reviews-container{
+    margin: auto;
+    width: 50%;
+    height: 300px;
+    min-width: 300px;
+    padding: 25px;
+    background-color: var(--bg-white);
+    box-shadow: var(--box-shadow);
+}

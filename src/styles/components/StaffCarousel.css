@@ -1,0 +1,9 @@
+.staff-carousel {
+    width: 50%;
+    height: auto;
+    padding: 25px;
+    min-height: 300px;
+    min-width: 300px;
+    background-color: var(--bg-white);
+    box-shadow: var(--box-shadow);
+}

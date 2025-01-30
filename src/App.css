@@ -1,8 +1,9 @@
-:root{
-  --bg_blue: #E9F0F8;
+:root {
+  --bg_blue: #bfd3ea;
   --vista_blue: #1B4188;
   --nav_gradient: -webkit-linear-gradient(90deg, #4068B4, #1B4188);
   --box-shadow: 0px 2px 5px black;
+  --bg-white: rgba(255, 255, 255, 0.95);
 }
 
 /* Lemon Milk Font Family */
@@ -10,18 +11,22 @@
   font-family: "lemonmilk-bold";
   src: url('./assets/fonts/lemon_milk/lm-bold.otf');
 }
+
 @font-face {
   font-family: "lemonmilk-med";
   src: url('./assets/fonts/lemon_milk/lm-med.otf');
 }
+
 @font-face {
   font-family: "lemonmilk-reg";
   src: url('./assets/fonts/lemon_milk/lm-reg.otf');
 }
+
 @font-face {
   font-family: "lemonmilk-light";
   src: url('./assets/fonts/lemon_milk/lm-light.otf');
 }
+
 @font-face {
   font-family: "lemonmilk-italic";
   src: url('./assets/fonts/lemon_milk/lm-italic.otf');
@@ -32,16 +37,18 @@
   font-family: "louisgeorge-bold";
   src: url('./assets/fonts/louis_george_cafe/lg-bold.ttf');
 }
+
 @font-face {
   font-family: "louisgeorge-italic";
   src: url('./assets/fonts/louis_george_cafe/lg-italic.ttf');
 }
+
 @font-face {
   font-family: "louisgeorge-reg";
   src: url('./assets/fonts/louis_george_cafe/lg-reg.ttf');
 }
 
-*{
+* {
   /* font-family: "lemonmilk-reg"; */
   font-family: "louisgeorge-reg";
 }
@@ -51,11 +58,15 @@
   padding-top: 100px;
   padding-bottom: 50px;
   height: auto;
+  min-height: 250px;
   width: 100vw;
   background-color: var(--bg_blue);
+  overflow: hidden;
 }
 
 .main-container {
   margin: auto;
-  max-width: 1350px;
+  max-width: 1250px;
+  width: 100vw;
+  overflow: hidden;
 }

@@ -4,7 +4,7 @@ import "../styles/pages/ServicesPage.css";
 export default function ServicesPage() {
 	return (
 		<div className="main-wrapper">
-			<h1>Services</h1>
+			<h1>ServicesPage</h1>
 		</div>
 	);
 }

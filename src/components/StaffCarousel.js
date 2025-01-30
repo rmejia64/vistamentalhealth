@@ -1,7 +1,7 @@
 import React from 'react';
-import '../styles/components/Staff.css';
+import '../styles/components/StaffCarousel.css';
 
-export default function Staff() {
+export default function StaffCarousel() {
   return (
     <div className='staff-carousel'>Staff</div>
   )

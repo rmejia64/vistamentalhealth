@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/components/Office.css';
+import '../styles/components/OfficeCarousel.css';
 
 const images = [
   require('../assets/images/banners/office1.jpeg'),
@@ -8,7 +8,7 @@ const images = [
   require('../assets/images/banners/office4.jpeg'),
 ];
 
-const Office = () => {
+const OfficeCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -19,9 +19,9 @@ const Office = () => {
   }, []);
 
   return (
-    <div className="carousel-container">
+    <div className="office-carousel-container">
       <div
-        className="carousel"
+        className="office-carousel"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {images.map((image, index) => (
@@ -29,7 +29,7 @@ const Office = () => {
             key={index}
             src={image}
             alt={`Slide ${index + 1}`}
-            className="carousel-image"
+            className="office-image"
           />
         ))}
       </div>
@@ -37,4 +37,4 @@ const Office = () => {
   );
 };
 
-export default Office;
+export default OfficeCarousel;

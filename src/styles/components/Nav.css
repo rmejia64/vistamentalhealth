@@ -83,3 +83,22 @@
         font-size: 14pt;
     }
 }
+
+@media screen and (max-width: 650px) {
+    .company-name {
+        font-size: 16pt;
+    }
+    
+    .company-subname {
+        font-size: 10pt;
+    }
+
+    .logo{
+        width: 50px;
+        height: auto;
+    }
+
+    .menu-button{
+        width: 30px;
+    }
+}
