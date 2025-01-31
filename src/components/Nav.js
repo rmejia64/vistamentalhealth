@@ -1,12 +1,13 @@
 import React from "react";
 import logo from "../logo.svg";
 import menu_button from "../assets/images/icons/bars-solid.svg";
+import close_button from "../assets/images/icons/close-circle.svg";
 import "../styles/components/Nav.css";
 import { Link } from "react-router-dom";
 
-export default function Nav() {
+export default function Nav({ isOpen, toggleNav }) {
 	return (
-		<div className="nav-container">
+		<div className="nav-container" style={isOpen ? { boxShadow: "none" } : {}}>
 			<Link to="/">
 				<img className="logo" alt="Vista Mental Health Logo" src={logo} />
 			</Link>
@@ -30,7 +31,12 @@ export default function Nav() {
 					Contact Us
 				</Link>
 			</div>
-			<img className="menu-button" alt="a menu button" src={menu_button} />
+			<img
+				className="menu-button"
+				alt="a menu button"
+				src={isOpen ? close_button : menu_button}
+				onClick={() => toggleNav(!isOpen)}
+			/>
 		</div>
 	);
 }

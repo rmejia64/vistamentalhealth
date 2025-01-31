@@ -1,10 +1,3 @@
-.main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
-}
-
 .row-one,
 .row-two {
     display: flex;
@@ -12,14 +5,15 @@
     justify-content: space-between;
     gap: 50px;
     align-items: center;
-    width: 95%;
-    max-width: 1250px;
+    width: 100%;
     height: auto;
 }
 
 .row-one {
     position: absolute;
-    top: 325px;
+    max-width: 1250px;
+    width: 90vw;
+    top: 335px;
 }
 
 .banner-card {
@@ -28,7 +22,7 @@
     width: 50%;
     padding: 25px;
     margin-bottom: 50px;
-    max-width: 500px;
+    max-width: 650px;
     min-width: 300px;
     box-shadow: var(--box-shadow);
     position: relative;
@@ -42,10 +36,14 @@
     background-color: var(--bg-white);
     padding: 25px;
     margin-bottom: 50px;
-    max-width: 500px;
+    max-width: 450px;
     min-width: 300px;
     box-shadow: var(--box-shadow);
     text-align: center;
+}
+
+#blue{
+    color: var(--vista_blue_light);
 }
 
 .about-us {
@@ -72,7 +70,7 @@
     height: 50px;
     border: 2px solid black;
     background-color: white;
-    font-size: 13px;
+    font-size: 10pt;
     color: black;
 }
 
@@ -103,16 +101,19 @@
     }
 
     .row-one {
-        top: 250px;
-    }
-
-    .call-to-action {
-        top: -50px;
-        text-align: center;
+        top: 260px;
     }
 
     .banner-card {
-        top: 50px;
+        top: 40px;
+    }
+
+    .down-arrows{
+        position: absolute;
+        top: 275px;
+        width: 25px;
+        height: auto;
+        display: block;
     }
 
     .about-us {
@@ -123,13 +124,5 @@
 @media screen and (max-width: 650px) {
     .heading {
         font-size: 16pt;
-    }
-
-    .down-arrows{
-        position: absolute;
-        top: 275px;
-        width: 25px;
-        height: auto;
-        display: block;
     }
 }

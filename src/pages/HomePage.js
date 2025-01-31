@@ -12,7 +12,9 @@ export default function HomePage() {
 			<div className="main-container">
 				<div className="row-one">
 					<div className="call-to-action">
-						<h1 className="heading">Your Mental Health Matters.</h1>
+						<h1 id="blue" className="heading">
+							Your Mental Health Matters.
+						</h1>
 						<h2 className="subheading">
 							Compassionate Care, Support, and Guidance for Every Step of Your
 							Journey.

@@ -2,10 +2,8 @@ import React, { useState, useEffect } from 'react';
 import '../styles/components/OfficeCarousel.css';
 
 const images = [
-  require('../assets/images/banners/office1.jpeg'),
-  require('../assets/images/banners/office2.jpeg'),
-  require('../assets/images/banners/office3.jpeg'),
-  require('../assets/images/banners/office4.jpeg'),
+  require('../assets/images/banners/front-office.jpg'),
+  require('../assets/images/banners/inside-office.jpg'),
 ];
 
 const OfficeCarousel = () => {

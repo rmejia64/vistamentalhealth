@@ -19,9 +19,11 @@ export default function Footer() {
 					<p className="address">
 						<Link
 							className="footer-links"
+							rel="noreferrer"
+							target="_blank"
 							to="https://maps.app.goo.gl/whjLZff4cwWMWgvm8"
 						>
-							Address: 12560 W. Washington Blvd, Los Angeles, CA 90066
+							Address: 12560 W. Washington Blvd, Los Angeles, CA 90066
 						</Link>
 					</p>
 				</div>
@@ -36,19 +38,28 @@ export default function Footer() {
 					</li>
 
 					<li>
-						<Link to="/Resources" className="footer-links">
+						<Link
+							to="/Resources"
+							className="footer-links"
+						>
 							Links and Resources
 						</Link>
 					</li>
 
 					<li>
-						<Link to="/Resources" className="footer-links">
+						<Link
+							to="/Resources"
+							className="footer-links"
+						>
 							Payments
 						</Link>
 					</li>
 
 					<li>
-						<Link to="/Resources" className="footer-links">
+						<Link
+							to="/Resources"
+							className="footer-links"
+						>
 							Forms
 						</Link>
 					</li>

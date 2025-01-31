@@ -12,6 +12,7 @@ function useDynamicTitles() {
       "/Resources": "Vista Mental Health | Resources",
       "/Contact": "Vista Mental Health | Contact Us",
       "/Blog": "Vista Mental Health | Blog",
+      "/Privacy": "Vista Mental Health | Privacy",
     };
 
     const title = pageTitles[location.pathname] || "Vista Mental Health";

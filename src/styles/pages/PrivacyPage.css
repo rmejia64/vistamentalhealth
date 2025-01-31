@@ -1,0 +1,61 @@
+.privacy-container {
+    width: 75vw;
+    max-width: 600px;
+    padding-top: 25px;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.privacy-header{
+    text-align: left;
+    width: 100%;
+    margin: 0;
+}
+
+.privacy-statement {
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    font-size: 12pt;
+    padding: 15px;
+}
+
+.privacy-link{
+    text-decoration: underline;
+    color: rgb(8, 14, 131);
+}
+
+.privacy-link:hover {
+    color: rgb(18, 28, 221);
+}
+
+.underline {
+    text-decoration: underline;
+    font-family: "louisgeorge-bold";
+}
+
+.italic {
+    font-style: italic;
+}
+
+.home-button {
+    width: 150px;
+    height: 50px;
+    border: 2px solid black;
+    background-color: white;
+    font-size: 10pt;
+    color: black;
+}
+
+.home-button:hover {
+    background-color: aliceblue;
+}
+
+@media screen and (max-width: 950px) {
+    .privacy-statement {
+        font-size: 10pt;
+    }
+}
