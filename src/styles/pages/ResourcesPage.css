@@ -4,20 +4,58 @@
     flex-wrap: wrap;
     width: 100%;
     height: auto;
-    align-items: center;
+    align-items: top;
     justify-content: space-evenly;
     gap: 50px;
 }
 
 .resource-card {
     width: 40vw;
-    height: 400px;
+    height: auto;
     background-color: white;
+    padding-bottom: 25px;
 }
 
 .resource-header{
     padding: 25px;
     font-size: 16pt;
+}
+
+.resource-description {
+    font-size: 10pt;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+}
+
+.resource-link {
+    margin: 25px;
+    margin-left: 50px;
+    text-decoration: underline;
+    color: black;
+}
+
+.resource-link:hover {
+    color: var(--vista_blue_light);
+}
+
+.resource-link-header {
+    font-size: 12pt;
+    font-family: "louisgeorge-italic";
+}
+
+.resource-link-list {
+    font-size: 12pt;
+}
+
+.resource-link-list {
+    list-style: none;
+}
+
+@media screen and (max-width: 950px) {
+    .resource-card {
+        width: 80%;
+    }
 }
 
 @media screen and (max-width: 650px) {

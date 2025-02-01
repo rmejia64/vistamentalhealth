@@ -75,5 +75,12 @@
 
 .main-header {
   margin-top: 50px;
+  margin-bottom: 50px;
   font-size: 24pt;
+}
+
+@media screen and (max-width: 950px) {
+  .main-header {
+    text-align: center;
+  }
 }

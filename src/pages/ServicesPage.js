@@ -96,8 +96,15 @@ export default function ServicesPage() {
 							Telepsychiatry and home visits may be offered to some patients.
 							Please inquire with our office to see if these services would fit
 							your needs. Should you choose to use our telepsychiatry services,
-							please click on this link to see a video on how to create a
-							profile with SecureVideo.
+							please click on the link below to see a video on how to create a
+							profile with SecureVideo:<br></br>
+							<a
+								target="_blank"
+								rel="noreferrer"
+								href="https://securevideo.com/about-us/"
+							>
+								https://securevideo.com/about-us/
+							</a>
 						</p>
 					</div>
 				</div>
