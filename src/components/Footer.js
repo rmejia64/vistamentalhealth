@@ -14,7 +14,7 @@ export default function Footer() {
 			<div className="footer-row">
 				<div className="footer-info">
 					<h1 className="footer-title">Vista Mental Health</h1>
-					<h2 className="footer-subtitle">Psychiatric & Couseling Services</h2>
+					<h2 className="footer-subtitle">Psychiatric & Counseling Services</h2>
 
 					<p className="address">
 						<Link

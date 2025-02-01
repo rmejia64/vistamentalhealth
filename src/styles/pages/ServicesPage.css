@@ -13,10 +13,6 @@
     padding-bottom: 25px;
 }
 
-.services-title{
-    width: 80%;
-}
-
 .conditions-treated {
     width: auto;
     padding: 25px;
@@ -25,7 +21,7 @@
 }
 
 .service-card {
-    width: 325px;
+    width: 300px;
     min-height: 400px;
     background-color: var(--bg_blue);
     box-shadow: var(--box-shadow);

@@ -36,7 +36,7 @@ function App() {
 		<>
 			<ScrollToTop />
 			<Nav isOpen={isOpen} toggleNav={toggleNav} />
-			{isOpen ? <MobileNav toggleNav={toggleNav} /> : <></>}
+			{isOpen ? <MobileNav isOpen={isOpen} toggleNav={toggleNav} /> : <></>}
 			<Routes>
 				<Route path="/" element={<HomePage />} />
 				<Route path="/Team" element={<TeamPage />} />

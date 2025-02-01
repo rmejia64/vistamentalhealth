@@ -5,7 +5,7 @@ export default function ServicesPage() {
 	return (
 		<div className="main-wrapper">
 			<div className="main-container">
-				<h1 className="services-title">Services</h1>
+				<h1 className="main-header">Services</h1>
 				<div className="services-container">
 					<p className="conditions-treated">
 						Our services are designed to treat a wide range of mental health

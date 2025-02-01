@@ -1,26 +1,9 @@
 .privacy-container {
-    width: 75vw;
-    max-width: 600px;
-    padding-top: 25px;
-    height: auto;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-}
-
-.privacy-header{
-    text-align: left;
-    width: 100%;
-    margin: 0;
-}
-
-.privacy-statement {
     background-color: white;
     box-shadow: var(--box-shadow);
     font-size: 12pt;
     padding: 15px;
+    margin-bottom: 25px;
 }
 
 .privacy-link{

@@ -4,9 +4,9 @@ import "../styles/pages/PrivacyPage.css";
 export default function PrivacyPage() {
 	return (
 		<div className="main-wrapper">
-			<div className="privacy-container">
-				<h1 className="privacy-header">Privacy Policy</h1>
-				<div className="privacy-statement">
+			<div className="main-container">
+				<h1 className="main-header">Privacy Policy</h1>
+				<div className="privacy-container">
 					<p>
 						This Privacy Policy applies to the sites and platforms where it
 						appears. This Privacy Policy describes how Vista Mental Health
