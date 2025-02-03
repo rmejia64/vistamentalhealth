@@ -10,7 +10,8 @@
 }
 
 .resource-card {
-    width: 40vw;
+    width: 40%;
+    max-width: 600px;
     height: auto;
     background-color: white;
     padding-bottom: 25px;
