@@ -41,7 +41,7 @@
     min-width: 300px;
     height: 400px;
     margin-top: 15px;
-    background-color: var(--vista_blue_light);
+    background-color: var(--bg_blue);
     box-shadow: var(--box-shadow);
 }
 
