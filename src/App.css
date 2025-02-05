@@ -7,32 +7,6 @@
   --bg-white: rgba(255, 255, 255, 0.95);
 }
 
-/* Lemon Milk Font Family */
-@font-face {
-  font-family: "lemonmilk-bold";
-  src: url('./assets/fonts/lemon_milk/lm-bold.otf');
-}
-
-@font-face {
-  font-family: "lemonmilk-med";
-  src: url('./assets/fonts/lemon_milk/lm-med.otf');
-}
-
-@font-face {
-  font-family: "lemonmilk-reg";
-  src: url('./assets/fonts/lemon_milk/lm-reg.otf');
-}
-
-@font-face {
-  font-family: "lemonmilk-light";
-  src: url('./assets/fonts/lemon_milk/lm-light.otf');
-}
-
-@font-face {
-  font-family: "lemonmilk-italic";
-  src: url('./assets/fonts/lemon_milk/lm-italic.otf');
-}
-
 /* Louis George Font Family */
 @font-face {
   font-family: "louisgeorge-bold";
