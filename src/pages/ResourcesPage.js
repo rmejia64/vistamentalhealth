@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/pages/ResourcesPage.css";
+import BlogCarousel from "../components/BlogCarousel";
 
 export default function ResourcesPage() {
 	return (
@@ -146,7 +147,8 @@ export default function ResourcesPage() {
 						</ul>
 					</div>
 					<div className="resource-card">
-						<h1 className="resource-header">Recent Blog Posts</h1>
+						<h1 className="resource-header">Recent Blog Posts:</h1>
+						<BlogCarousel />
 					</div>
 				</div>
 			</div>

@@ -1,9 +1,95 @@
 .staff-carousel {
-    width: 50%;
-    height: auto;
-    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     min-height: 300px;
-    min-width: 300px;
+    /* Adjust height as needed */
     background-color: var(--bg-white);
     box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.staff-photo {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: fill;
+    margin-bottom: 10px;
+}
+
+.staff-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.staff-name {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.staff-title {
+    font-size: 1em;
+    color: black;
+}
+
+.staff-bio {
+    font-size: 0.9em;
+    color: black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* Number of lines to show */
+    line-clamp: 3;
+    /* Standard property for compatibility */
+    -webkit-box-orient: vertical;
+}
+
+.staff-bio.full {
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+}
+
+.read-more {
+    background: none;
+    border: none;
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 950px) {
+    .staff-carousel {
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+    }
+
+    .staff-photo {
+        width: 100px;
+        /* Adjusted size for smaller screens */
+        height: auto;
+        /* Adjusted size for smaller screens */
+    }
+
+    .staff-name {
+        font-size: 1em;
+        /* Adjusted font size for smaller screens */
+    }
+
+    .staff-title {
+        font-size: 0.9em;
+        /* Adjusted font size for smaller screens */
+    }
+
+    .staff-bio {
+        font-size: 0.8em;
+        /* Adjusted font size for smaller screens */
+    }
+
 }

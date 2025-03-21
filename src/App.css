@@ -1,6 +1,6 @@
 :root {
-  --bg_blue: #bfd3ea;
-  --vista_blue_light: #4068B4;
+  --bg_blue: rgb(191, 211, 234);
+  --vista_blue_light: rgb(64, 104, 180);
   --vista_blue_dark: #1B4188;
   --nav_gradient: -webkit-linear-gradient(90deg, #4068B4, #1B4188);
   --box-shadow: 0px 2px 5px black;

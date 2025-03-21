@@ -27,6 +27,9 @@ export default function Nav({ isOpen, toggleNav }) {
 				<Link className="nav-link" to="/Resources">
 					Links & Resources
 				</Link>
+				<Link className="nav-link" to="/Blog">
+					Blog
+				</Link>
 				<Link className="nav-link" to="/Contact">
 					Contact Us
 				</Link>

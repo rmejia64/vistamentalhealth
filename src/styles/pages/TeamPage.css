@@ -1,6 +1,112 @@
-.team-container{
+.team-container {
     background-color: white;
     box-shadow: var(--box-shadow);
-    width: 100%;
-    padding: 25px;
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: space-evenly;
+    margin: 0 auto;
 }
+
+.team-filter {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: rgba(200, 200, 200, 0.5);
+    border-radius: 20px;
+}
+
+.team-category {
+    cursor: pointer;
+    padding: 10px 10px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.team-category.active {
+    background-color: rgba(255, 255, 255, 0.5);
+    /* border: 5px solid var(--bg_blue); */
+}
+
+.staff-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    min-width: 300px;
+    gap: 50px;
+}
+
+.staff-card {
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    background-color: var(--bg_blue);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: top;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.staff-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+}
+
+.staff-info > * {
+    width: 100%;
+    height: auto;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.staff-photo {
+    width: 300px; /* Increased size */
+    height: 300px; /* Increased size */
+    border-radius: 15px; /* Rounded corners */
+    background-color: var(--bg-white);
+    box-shadow: var(--box-shadow);
+    object-fit: fill;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 950px) {
+    .staff-card{
+        flex-direction: column;
+        align-items: center;
+    }
+    .staff-photo {
+        width: 200px; /* Full width on smaller screens */
+        height: 300px; /* Maintain aspect ratio */
+    }
+    .staff-info {
+        align-items: center; /* Center align text on smaller screens */
+        text-align: center; /* Center text */
+    }
+    .staff-info > * {
+        text-align: center; /* Center text for all elements */
+    }
+    .team-filter {
+        flex-direction: column; /* Stack categories vertically on smaller screens */
+        align-items: center; /* Center align categories */
+    }
+    .team-category {
+        width: 90%; /* Full width for categories */
+        margin: 5px 0; /* Add some spacing between categories */
+    }
+  }
