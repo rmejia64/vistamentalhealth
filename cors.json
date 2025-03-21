@@ -1,7 +1,11 @@
 [
-    {
-      "origin": ["*"],
-      "method": ["GET"],
-      "maxAgeSeconds": 3600
-    }
-  ]
+	{
+		"origin": [
+			"https://vistamentalhealth-d506d.firebaseapp.com",
+			"https://vistamentalhealth-d506d.web.app/",
+      "https://vistamentalhealth.net"
+		],
+		"method": ["GET"],
+		"maxAgeSeconds": 3600
+	}
+]

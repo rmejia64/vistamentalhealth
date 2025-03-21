@@ -32,6 +32,7 @@ firebase-debug.log
 firestore.indexes.json
 firestore.rules
 storage.rules
+cors.json
 
 # macOS system files
 Thumbs.db
