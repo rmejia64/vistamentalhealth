@@ -1,6 +1,7 @@
 .blog-carousel {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
     padding: 10px;
 }
@@ -13,12 +14,24 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 85%;
+}
+
+.blog-carousel-image {
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
 }
 
 .blog-carousel-title {
     font-size: 1.5em;
     color: var(--primary-color);
     margin-bottom: 5px;
+}
+
+.blog-carousel-link {
+    text-decoration: none;
+    color: var(--primary-color);
 }
 
 .blog-carousel-author {

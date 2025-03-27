@@ -1,8 +1,59 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import "../styles/pages/ResourcesPage.css";
 import BlogCarousel from "../components/BlogCarousel";
+import { db } from "../firebaseConfig"; // Ensure to import the storage config
+import { collection, getDocs } from "firebase/firestore";
+import { getStorage, ref, getDownloadURL } from "firebase/storage";
 
 export default function ResourcesPage() {
+	const [forms, setForms] = useState([]);
+
+	useEffect(() => {
+		const fetchForms = async () => {
+			try {
+				console.log("Fetching forms from Firestore...");
+				const querySnapshot = await getDocs(collection(db, "forms"));
+				console.log("Query snapshot received:", querySnapshot);
+
+				const storage = getStorage();
+				const formsArray = await Promise.all(
+					querySnapshot.docs.map(async (doc) => {
+						const data = doc.data();
+						console.log("Document data:", data);
+
+						let url = data.URL;
+						if (url && url.startsWith("gs://")) {
+							console.log("Processing gs:// URL:", url);
+							const bucketPath = url.replace(
+								"gs://vistamentalhealth-d506d.appspot.com/",
+								""
+							);
+							const storageRef = ref(storage, bucketPath);
+							url = await getDownloadURL(storageRef);
+							console.log("Converted URL:", url);
+						}
+
+						if (data.title && url) {
+							return { id: doc.id, title: data.title, url };
+						} else {
+							console.warn("Skipping invalid form entry:", data);
+							return null;
+						}
+					})
+				);
+
+				const validForms = formsArray.filter((form) => form !== null);
+				console.log("Valid forms:", validForms);
+				setForms(validForms);
+			} catch (error) {
+				console.error("Error fetching forms:", error);
+			}
+		};
+
+		fetchForms();
+	}, []);
+
 	return (
 		<div className="main-wrapper">
 			<div className="main-container">
@@ -11,7 +62,7 @@ export default function ResourcesPage() {
 					<div className="resource-card">
 						<h1 className="resource-header">Payments</h1>
 						<p className="resource-description">
-							Vista Mental Health Medical Group does not accept insurance
+							Vista Mental Health does not accept insurance
 							directly. We can provide you with a “superbill” that you can file
 							with your insurance for reimbursement. You should check with your
 							insurance carrier to determine what they will pay for an
@@ -41,39 +92,13 @@ export default function ResourcesPage() {
 					<div className="resource-card">
 						<h1 className="resource-header">Forms</h1>
 						<ul className="resource-link-list">
-							<label className="resource-link-header">
-								Psychiatry New Patient Forms:
-							</label>
-							<a target="_blank" rel="noreferrer" href="/">
-								<li className="resource-link">Psychiatry Intake Form</li>
-							</a>
-						</ul>
-						<ul className="resource-link-list">
-							<label className="resource-link-header">
-								Therapy New Client Forms:
-							</label>
-							<a target="_blank" rel="noreferrer" href="/">
-								<li className="resource-link">Individual Couseling Form</li>
-							</a>
-							<a target="_blank" rel="noreferrer" href="/">
-								<li className="resource-link">Couples Couseling Form</li>
-							</a>
-							<a target="_blank" rel="noreferrer" href="/">
-								<li className="resource-link">Family Therapy Couseling Form</li>
-							</a>
-						</ul>
-						<ul className="resource-link-list">
-							<label className="resource-link-header">
-								Biofeedback New Patient Forms:
-							</label>
-							<a target="_blank" rel="noreferrer" href="/">
-								<li className="resource-link">New VMH Patient Intake Form</li>
-							</a>
-							<a target="_blank" rel="noreferrer" href="/">
-								<li className="resource-link">
-									Current VMH Patient Intake Form
+							{forms.map((form) => (
+								<li key={form.id} className="resource-link">
+									<a target="_blank" rel="noreferrer" href={form.url}>
+										{form.title}
+									</a>
 								</li>
-							</a>
+							))}
 						</ul>
 					</div>
 					<div className="resource-card">

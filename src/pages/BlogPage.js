@@ -50,17 +50,18 @@ export default function BlogPage() {
                 {posts.map((post) => (
                     <div className="blog-post" key={post.id}>
                         <h2 className="blog-title">{post.title}</h2>
-                        <p className="blog-author">By {post.author}</p>
                         <p className="blog-date">
                             {new Date(post.updated.toDate()).toLocaleDateString()}
                         </p>
                         <ReactMarkdown>{post.content}</ReactMarkdown>
-                        {post.images && post.images.map((url, index) => (
+                        {post.images && post.images.length > 0 && post.images.map((url, index) => (
                             <img className="blog-image" key={index} src={url} alt={`${post.title} ${index + 1}`} />
                         ))}
-						<p className="blog-tags">
-							Tags: {post.tags && post.tags.length > 0 ? post.tags.join(", ") : "No tags"}
-						</p>
+                        {post.tags && post.tags.length > 0 && (
+                            <p className="blog-tags">
+                                Tags: {post.tags.join(", ")}v
+                            </p>
+                        )}
                     </div>
                 ))}
             </div>

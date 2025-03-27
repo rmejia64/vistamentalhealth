@@ -27,7 +27,7 @@ export default function Footer() {
 						</Link>
 					</p>
 				</div>
-				<a alt="Call Vista Mental Health" href="tel:+13238136218">
+				<a alt="Call Vista Mental Health" href="tel: 3238136218">
 					<button className="call-button">Call Us</button>
 				</a>
 				<ul className="link-list">
@@ -77,13 +77,6 @@ export default function Footer() {
 					</li>
 				</ul>
 			</div>
-			<p className="privacy-text">
-				By using this site you are agreeing to our{" "}
-				<Link to="/Privacy" className="footer-links">
-					Privacy Policy
-				</Link>
-				.
-			</p>
 			<p className="copyright">&copy; 2025 Vista Mental Health </p>
 		</div>
 	);

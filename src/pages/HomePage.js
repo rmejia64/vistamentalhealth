@@ -19,9 +19,8 @@ export default function HomePage() {
 							Compassionate Care, Support, and Guidance for Every Step of Your
 							Journey.
 						</h2>
-						<p className="paragraph">Call us to schedule an appointment</p>
 						<a alt="Call Vista Mental Health" href="tel:+13238136218">
-							<button className="call-button">Call +1 (323) 813-6218</button>
+							<button className="call-button">Call: (323) 813-6218</button>
 						</a>
 					</div>
 					<img
@@ -42,12 +41,10 @@ export default function HomePage() {
 						<h1 className="subheading">Our Vision and Mission</h1>
 						<p className="paragraph">
 							At Vista Mental Health, our vision is to provide exceptional
-							mental health care to our local community. Our mission is to
-							empower those in need of support by equipping them with the tools
-							and strategies to better understand and heal themselves. We are
-							dedicated to identifying the right corrective and preventative
-							measures, tailoring every visit to the unique needs of each
-							individual in the moment.
+							mental health care. Our mission is to empower those in need of
+							support by equipping them with the tools and strategies to better
+							understand and heal themselves. We are dedicated to tailoring
+							every visit to the unique needs of each individual.
 						</p>
 						<h1 className="subheading">
 							Our Commitment to Respect and Privacy

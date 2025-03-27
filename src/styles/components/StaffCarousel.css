@@ -1,21 +1,44 @@
 .staff-carousel {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    width: 100%;
+    max-width: 650px;
+    width: 60%;
+    min-width: 300px;
     min-height: 300px;
-    /* Adjust height as needed */
     background-color: var(--bg-white);
     box-shadow: var(--box-shadow);
     border-radius: 10px;
+    margin: auto;
+}
+
+.staff-carousel-card{
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: top;
     padding: 20px;
+    border-radius: 10px;
 }
 
 .staff-photo {
-    width: 150px;
+    width: 150px; /* Adjusted size */
     height: auto;
     border-radius: 50%;
     object-fit: fill;
+    margin-bottom: 10px;
+}
+
+.staff-carousel-link {
+    width: 90%;
+    text-decoration: underline;
+    font-size: 12pt;
+    font-family: "louisgeorge-bold";
+    color: black;
     margin-bottom: 10px;
 }
 
@@ -67,14 +90,23 @@
     .staff-carousel {
         flex-direction: column;
         align-items: center;
-        width: 60%;
+    }
+
+    .staff-carousel-card {
+        flex-direction: column;
+        align-items: center;
+    }
+    .staff-info {
+        align-items: center;
+        text-align: center;
+    }
+    .staff-carousel-link {
+        width: 100%;
+        text-align: center;
     }
 
     .staff-photo {
         width: 100px;
-        /* Adjusted size for smaller screens */
-        height: auto;
-        /* Adjusted size for smaller screens */
     }
 
     .staff-name {
