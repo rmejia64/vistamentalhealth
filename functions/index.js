@@ -1,14 +1,18 @@
 const { onSchedule } = require("firebase-functions/v2/scheduler");
 const admin = require("firebase-admin");
+const { fetchGoogleReviews } = require("./googleReviews"); // Import the function
 
 admin.initializeApp();
 
-exports.updateReviews = onSchedule("every 7 days", {
-  timeZone: "America/Los_Angeles", // Adjust to your timezone
-}, async (context) => {
-  console.log("Fetching Google reviews...");
+// exports.updateReviews = onSchedule("every 7 days", async (event) => {
+//   console.log("Fetching Google reviews...");
+//   await fetchGoogleReviews();
+//   console.log("Google reviews updated successfully.");
+// });
 
-  // Your logic for fetching and updating Firestore goes here
-  console.log("Google reviews updated successfully.");
-  return null;
-});
+(async () => {
+  console.log("Running updateReviews manually...");
+  await fetchGoogleReviews();
+  console.log("Done!");
+})();
+
