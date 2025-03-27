@@ -48,7 +48,6 @@ export default function BlogCarousel() {
                 <div className="blog-carousel-preview" key={post.id}>
                     <Link className="blog-carousel-link" to="/Blog">
                         <h2 className="blog-carousel-title">{post.title}</h2>
-                        <p className="blog-carousel-author">By {post.author}</p>
                         <p className="blog-carousel-date">
                             {new Date(post.updated.toDate()).toLocaleDateString()}
                         </p>
