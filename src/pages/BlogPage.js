@@ -57,11 +57,11 @@ export default function BlogPage() {
                         {post.images && post.images.length > 0 && post.images.map((url, index) => (
                             <img className="blog-image" key={index} src={url} alt={`${post.title} ${index + 1}`} />
                         ))}
-                        {post.tags && post.tags.length > 0 && (
+                        {/* {post.tags && post.tags.length > 0 && (
                             <p className="blog-tags">
-                                Tags: {post.tags.join(", ")}v
+                                Tags: {post.tags.join(", ")}
                             </p>
-                        )}
+                        )} */}
                     </div>
                 ))}
             </div>
