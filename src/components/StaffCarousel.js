@@ -79,7 +79,7 @@ export default function StaffCarousel() {
 					<h3 className="staff-name">
 						{currentStaff.firstName} {currentStaff.lastName}
 					</h3>
-					<p className="staff-title">{currentStaff.title}</p>
+					{/* <p className="staff-title">{currentStaff.title}</p> */}
 					<p className={`staff-bio ${showFullBio ? "full" : "truncated"}`}>
 						{currentStaff.bio}
 					</p>
