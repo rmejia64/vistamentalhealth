@@ -69,12 +69,6 @@ export default function Footer() {
 							Blog
 						</Link>
 					</li>
-
-					<li>
-						<Link to="/Privacy" className="footer-links">
-							Privacy Policy
-						</Link>
-					</li>
 				</ul>
 			</div>
 			<p className="copyright">&copy; 2025 Vista Mental Health </p>

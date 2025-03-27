@@ -3,31 +3,30 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    max-width: 650px;
     width: 60%;
-    min-width: 300px;
-    min-height: 300px;
+    min-width: 250px;
+    max-width: 600px;
     background-color: var(--bg-white);
     box-shadow: var(--box-shadow);
     border-radius: 10px;
     margin: auto;
+    padding: 20px;
 }
 
 .staff-carousel-card{
-    width: 90%;
+    width: 100%;
     max-width: 800px;
     height: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: top;
-    padding: 20px;
     border-radius: 10px;
 }
 
 .staff-photo {
-    width: 150px; /* Adjusted size */
-    height: auto;
+    width: auto; /* Adjusted size */
+    height: 100px;
     border-radius: 50%;
     object-fit: fill;
     margin-bottom: 10px;
@@ -90,6 +89,10 @@
     .staff-carousel {
         flex-direction: column;
         align-items: center;
+        max-height: 600px;
+        max-width: 450px;
+        width: 90%;
+        padding: 5px;
     }
 
     .staff-carousel-card {
@@ -103,25 +106,6 @@
     .staff-carousel-link {
         width: 100%;
         text-align: center;
-    }
-
-    .staff-photo {
-        width: 100px;
-    }
-
-    .staff-name {
-        font-size: 1em;
-        /* Adjusted font size for smaller screens */
-    }
-
-    .staff-title {
-        font-size: 0.9em;
-        /* Adjusted font size for smaller screens */
-    }
-
-    .staff-bio {
-        font-size: 0.8em;
-        /* Adjusted font size for smaller screens */
     }
 
 }

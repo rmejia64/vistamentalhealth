@@ -79,14 +79,14 @@ export default function TeamPage() {
                         >
                             Psychiatrists
                         </h2>
-                        <h2
+                        {/* <h2
                             className={`team-category ${
                                 selectedCategory === "Therapists" ? "active" : ""
                             }`}
                             onClick={() => handleCategoryClick("Therapists")}
                         >
                             Therapists
-                        </h2>
+                        </h2> */}
                         <h2
                             className={`team-category ${
                                 selectedCategory === "Administrative Assistants" ? "active" : ""
