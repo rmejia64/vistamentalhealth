@@ -1,9 +1,11 @@
 const axios = require("axios");
 const admin = require("firebase-admin");
-require("dotenv").config();
+const functions = require("firebase-functions");
+require("dotenv").config(); // Load environment variables
 
-const GOOGLE_API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
-const PLACE_ID = process.env.REACT_APP_PLACE_ID;
+const GOOGLE_API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY || (functions.config().google && functions.config().google.api_key);
+const PLACE_ID = process.env.REACT_APP_PLACE_ID || (functions.config().google && functions.config().google.place_id);
+
 const FIRESTORE_COLLECTION = "reviews";
 
 async function fetchGoogleReviews() {
@@ -15,6 +17,8 @@ async function fetchGoogleReviews() {
             console.error("No reviews found");
             return;
         }
+        console.log("Google API Response:", JSON.stringify(response.data, null, 2));
+
 
         const filteredReviews = response.data.result.reviews
             .filter(review => review.rating >= 4)
