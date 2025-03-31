@@ -1,30 +1,69 @@
 const { onSchedule } = require("firebase-functions/v2/scheduler");
-const { https } = require("firebase-functions/v2");
-const admin = require("firebase-admin");
+const { onRequest } = require("firebase-functions/v2/https");
+const { logger } = require("firebase-functions");
 const { fetchGoogleReviews } = require("./googleReviews"); // Import the function
 
-admin.initializeApp();
+/**
+ * Fetch Google reviews with a retry mechanism using exponential backoff.
+ * @param {number} retries Number of retry attempts.
+ * @param {number} delay Initial delay between retries in milliseconds.
+ */
+async function fetchReviewsWithRetry(retries = 3, delay = 2000) {
+	for (let i = 0; i < retries; i++) {
+		try {
+			logger.info("Fetching Google reviews...");
+			await fetchGoogleReviews(); // Assuming this is your actual function
+			logger.info("Google reviews updated successfully.");
+			return;
+		} catch (error) {
+			if (i < retries - 1) {
+				logger.error(
+					`Error fetching Google reviews. Retries left: ${retries - i - 1}: ${
+						error.message
+					}`,
+					{ error }
+				);
 
-// Scheduled function (runs every 7 days)
+				// Wait before retrying with updated delay
+				const currentDelay = delay; // Capture the current value of delay
+				await new Promise((resolve) => setTimeout(resolve, currentDelay));
+
+				// Exponential backoff: Double the delay for the next retry
+				delay *= 2;
+			} else {
+				throw new Error("Max retries reached. Failed to update reviews.");
+			}
+		}
+	}
+}
+
+// Scheduled function (runs every Sunday at midnight UTC)
 exports.updateReviews = onSchedule("0 0 * * 0", async (event) => {
-  // Runs every Sunday at midnight (UTC)
-  try {
-    console.log("Fetching Google reviews...");
-    await fetchGoogleReviews();
-    console.log("Google reviews updated successfully.");
-  } catch (error) {
-    console.error("Error fetching Google reviews:", error);
-  }
+	try {
+		await fetchReviewsWithRetry();
+	} catch (error) {
+		logger.error("Final failure in scheduled Google reviews update:", {
+			error,
+		});
+	}
 });
 
-// Manual triggerable function (you can call this one right away)
-exports.triggerUpdateReviews = https.onRequest(async (req, res) => {
-  try {
-    console.log("Manually triggering Google reviews update...");
-    await fetchGoogleReviews();
-    res.status(200).send("Google reviews updated successfully.");
-  } catch (error) {
-    console.error("Error updating reviews:", error);
-    res.status(500).send("Error updating reviews.");
-  }
-});
+exports.triggerUpdateReviews = onRequest(
+	{ timeoutSeconds: 120 }, // Use this instead of runWith()
+	async (req, res) => {
+		try {
+			await fetchReviewsWithRetry();
+			res.status(200).json({
+				success: true,
+				message: "Google reviews updated successfully.",
+			});
+		} catch (error) {
+			logger.error("Manual trigger failed:", { error });
+			res.status(500).json({
+				success: false,
+				message: "Error updating reviews.",
+				error: error.message,
+			});
+		}
+	}
+);

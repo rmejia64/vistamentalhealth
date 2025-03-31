@@ -30,7 +30,8 @@
         "firebase-debug.log",
         "firebase-debug.*.log",
         "*.local"
-      ]
+      ],
+      "timeoutSeconds": 540
     }
   ]
 }

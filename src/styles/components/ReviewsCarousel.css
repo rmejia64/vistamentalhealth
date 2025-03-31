@@ -1,10 +1,88 @@
-.reviews-container{
+.reviews-container {
     margin: auto;
     margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50%;
-    height: 300px;
-    min-width: 300px;
-    padding: 25px;
-    background-color: var(--bg-white);
-    box-shadow: var(--box-shadow);
+    height: auto;
+    min-width: 200px;
+}
+
+.review-card {
+    width: 100%;
+    max-width: 500px;
+    /* Set a maximum width */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    padding: 20px;
+    text-align: center;
+}
+
+.review-card p {
+    margin: 10px 0;
+}
+
+.review-card .font-semibold {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.review-card .text-yellow-500 {
+    font-size: 24px;
+}
+
+.review-card .text-gray-700 {
+    font-size: 16px;
+    color: #4a4a4a;
+    line-height: 1.5;
+    max-height: 100px;
+    /* Prevent overflow if the review is too long */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Add an ellipsis if text overflows */
+}
+
+.review-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.reviews-container .loading,
+.reviews-container .error {
+    font-size: 18px;
+    color: #e53e3e;
+    /* Red for errors */
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .review-card {
+        max-width: 90%;
+        /* Make the card responsive on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .review-card {
+        padding: 15px;
+    }
+
+    .review-card .font-semibold {
+        font-size: 16px;
+    }
+
+    .review-card .text-yellow-500 {
+        font-size: 20px;
+    }
+
+    .review-card .text-gray-700 {
+        font-size: 14px;
+    }
 }

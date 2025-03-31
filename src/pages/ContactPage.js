@@ -5,7 +5,7 @@ import parking_img_2 from "../assets/images/street-view/back-office-1.jpg";
 import parking_img_3 from "../assets/images/street-view/back-office-2.jpg";
 
 export default function ContactPage() {
-	const googleMapsApiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
+	const googleMapsApiKey = process.env.googleMapsKey;
 	const mapAddress = "12560+W. Washington Blvd,+Los Angeles,+CA";
 	const [isLoading, setIsLoading] = useState(true);
 
